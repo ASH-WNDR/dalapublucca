@@ -4,6 +4,10 @@ blue   #42aeda */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 400;
@@ -307,18 +311,26 @@ section {
     object-position: center;
 }
 
-/* @media screen and (min-width: 1400px) {
+@media screen and (max-width: 768px) {
+    .item {
+        height: 290px;
+    }
+
     .owl-carousel .thumbnail {
-        height: 250px;
+        height: 230px;
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 600px) {
+
+    .item {
+        height: 390px;
+    }
 
     .owl-carousel .thumbnail {
-        height: 200px;
+        height: 320px;
     }
-} */
+}
 
 .book_title {
     background-color: #e5e5e5;
@@ -363,12 +375,16 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    /* .footer-flex {
+        display: inline-block;
+    } */
+
     .footer-flex {
         flex-direction: column;
     }
 }
 
-footer .logos {
+.logos {
     height: 38px;
     width: auto;
     margin: 10px 15px;
@@ -377,18 +393,19 @@ footer .logos {
 footer .UDRDTIT {
     font-size: 0.9rem;
     padding-top: 20px;
-    border-bottom: 1px solid #666 ;
-    padding-bottom:2px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 2px;
+    display: inline-block;
 }
 
 @media screen and (max-width: 414px) {
-    footer .logos {
+    .logos {
         max-width: 280px;
     }
 }
 
 @media screen and (max-width: 314px) {
-    footer .logos {
+    .logos {
         max-width: 200px;
         height: auto;
     }
@@ -426,14 +443,15 @@ footer p {
     border: 1px solid #d01577;
 }
 
-.table td, .table th {
+.table td,
+.table th {
     border-top: 1px solid #000;
 }
 
 .table td a {
     color: #000;
-    border-bottom:1px solid #a0a0a0; 
-    padding-bottom:2px;
+    border-bottom: 1px solid #a0a0a0;
+    padding-bottom: 2px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -441,7 +459,8 @@ footer p {
         min-width: 100%;
     }
 
-    tr.tr-only-hide, .table_title {
+    tr.tr-only-hide,
+    .table_title {
         display: none !important;
         height: 0px;
     }
@@ -475,7 +494,8 @@ footer p {
         border: 0;
     }
 
-    .table td, .table th {
+    .table td,
+    .table th {
         border-top: none;
     }
 }
@@ -517,16 +537,6 @@ footer p {
 
 .modal .Intro {
     margin-top: 25px;
-}
-
-/* fix */
-
-button:focus {
-    outline: none;
-}
-
-.modal .close {
-    opacity: 1;
 }
 
 /* Autori in esposizione */
@@ -584,11 +594,11 @@ button:focus {
 }
 
 .autori_sec01 h3,
-.autori_sec01 h5{
+.autori_sec01 h5 {
     color: #42aeda;
 }
 
-.autori_sec01 h5{
+.autori_sec01 h5 {
     margin-top: 15px;
 }
 
@@ -603,7 +613,7 @@ button:focus {
     height: 250px;
 }
 
-hr{
+hr {
     background-color: black;
     height: 5px;
 }
@@ -613,4 +623,39 @@ p.copyright {
     padding-top: 15px !important;
     margin: 0 !important;
     color: var(--bs-gray-500) !important;
+}
+
+/* top */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border: none;
+    outline: none;
+}
+
+.btn-top {
+    background-color: rgba(12, 31, 62, 0.5);
+    padding: 8px 0;
+    outline: none;
+    border-radius: 12px;
+}
+
+.btn-top img {
+    outline: none;
+}
+
+.btn:hover {
+    color: #fff
+}
+
+/* fix */
+
+button:focus {
+    outline: none;
+}
+
+.modal .close {
+    opacity: 1;
 }
